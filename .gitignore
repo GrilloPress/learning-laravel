@@ -5,3 +5,4 @@ crud/node_modules/
 crud/Homestead.yaml
 crud/Homestead.json
 crud/.env
+crud/storage/database.sqlite
