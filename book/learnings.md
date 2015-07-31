@@ -27,3 +27,5 @@ Route::resource('tasks', 'TasksController');
 ```
 
 # 2. Creating a controller
+
+To create a controller you use the ```php artisan make:controller``` command with the name of the controller afterwards

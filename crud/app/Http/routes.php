@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-  'as' => 'home',
-  'uses' => 'PagesController@home'
-});
+Route::get('/', [
+    'as' => 'home',
+    'uses' => 'PagesController@home'
+]);
 
 Route::resource('tasks', 'TasksController');
