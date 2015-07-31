@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  'as' => 'home',
+  'uses' => 'PagesController@home'
 });
+
+Route::resource('tasks', 'TasksController');

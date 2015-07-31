@@ -1,30 +1,29 @@
 # Creating a Laravel App
 
-1. Run ```laravel new``` command
-2. Configure database (This example uses sqlite)
+1. create a new route
+2. create a controller
 
-# 1. Running Laravel New
+# 1. Creating a route
 
-To create a Laravel application you run: ```laravel new app_name```
+You create routes in the /app/Http/routes.php file.
 
-cd into the app
-
-# 2. Configuring your database
-
-open up /config/database.php and assign the database to sqlite or whatever you want
-
-Create a sqlite database in /storage/ called: database.sqlite
-
-If it is not called ```database.sqlite``` you need to change the configuration code. In the ```database.php``` file the connector looks like:
+Inside you set out the routes in various methods. See documentation for examples: [routing](http://laravel.com/docs/5.0/routing)
 
 ```php
-'sqlite' => [
-            'driver'   => 'sqlite',
-            'database' => storage_path('database.sqlite'),
-            'prefix'   => '',
-        ],
+Route::get('/', [
+    'as' => 'home',
+    'uses' => 'PagesController@home'
+]);
 ```
 
-The ```storage_path()``` function accesses the storage file and within that you tell it where it can find the database ```.sqlite``` file.
+Will map the ```/``` url to the home function ina  controller called PagesController.
 
-one-line command from the root of the laravel folder would be: ```touch storage/database.sqlite```
+You can also create a resource route (covering all of Create Read Update and Delete and the HTTP verbs of Get Put Post Delete etc.)
+
+You do that with:
+
+```php
+Route::resource('tasks', 'TasksController');
+```
+
+# 2. Creating a controller
