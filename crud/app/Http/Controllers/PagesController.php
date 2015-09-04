@@ -16,6 +16,6 @@ class PagesController extends Controller
      */
     public function home()
     {
-        return "Hi there!";
+        return view("pages.home");
     }
 }
