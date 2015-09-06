@@ -12,7 +12,7 @@ cd into the app
 
 # 2. Configuring your database
 
-open up /config/database.php and assign the database to sqlite or whatever you want
+open up ```/config/database.php``` and assign the database to sqlite or whatever you want
 
 ## Using Sqlite
 
