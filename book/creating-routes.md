@@ -22,6 +22,8 @@ You can also create a resource route (covering all of Create Read Update and Del
 You do that with:
 
 ```php
+// If you want to create a list of task creation/deletion routes in one command
+
 Route::resource('tasks', 'TasksController');
 ```
 
