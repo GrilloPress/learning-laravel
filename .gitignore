@@ -1,8 +1,8 @@
 // GIT IGNORE FOR CRUD APP
 
-crud/vendor/
-crud/node_modules/
-crud/Homestead.yaml
-crud/Homestead.json
-crud/.env
-crud/storage/database.sqlite
+catty/vendor/
+catty/node_modules/
+catty/Homestead.yaml
+catty/Homestead.json
+catty/.env
+catty/storage/database.sqlite
