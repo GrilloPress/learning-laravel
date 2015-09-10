@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace catty\Events;
 
 abstract class Event
 {

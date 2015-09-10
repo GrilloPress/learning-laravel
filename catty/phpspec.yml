@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: catty
+        psr4_prefix: catty
         src_path: app
