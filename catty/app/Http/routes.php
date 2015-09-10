@@ -11,3 +11,7 @@ Route::get('stray', function() {
 Route::get('cats/{id}', function($id) {
   return sprintf('Cat #%s', $id);
 });
+
+Route::get('cats/{id}/{age}', function($id, $age) {
+  return $id . " " . $age; 
+});

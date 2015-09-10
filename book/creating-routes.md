@@ -44,3 +44,17 @@ class PagesController extends Controller {
     }
 }
 ```
+
+# 3. Route Parameters
+
+
+
+```php
+Route::get('cats/{id}', function($id) {
+  return sprintf('Cat #%s', $id);
+});
+
+Route::get('cats/{id}/{age}', function($id, $age) {
+  return $id . " " . $age; 
+});
+```
