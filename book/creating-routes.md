@@ -27,6 +27,8 @@ You do that with:
 Route::resource('tasks', 'TasksController');
 ```
 
+
+
 # 2. Creating a controller
 
 To create a controller you use the ```php artisan make:controller``` command with the name of the controller afterwards
@@ -47,7 +49,7 @@ class PagesController extends Controller {
 
 # 3. Route Parameters
 
-
+In Laravel, like many other frameworks, you can set URL or route parameters up so that
 
 ```php
 Route::get('cats/{id}', function($id) {
