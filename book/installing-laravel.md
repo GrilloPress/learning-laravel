@@ -1,5 +1,7 @@
 # Get Set Go Get Laravel
 
+## Installing Composer
+
 To get started with Laravel you need to use the PHP package manager [Composer](https://getcomposer.org/).
 
 If you are aware of NPM and Ruby's Bundler you'll have a sense already of what it does.
@@ -14,10 +16,18 @@ curl -sS https://getcomposer.org/installer | php
 
 Once that downloads you just run: ```php composer.phar```. The ```.phar``` is a PHP Archive format. A Zip file for PHP basically.
 
-# Installing Laravel
+## Installing Laravel
 
-To install Laravel you have to download an installer via Composer. 
+To install Laravel you have to download an installer via Composer (which partly explains why you need Composer!).
 
 To do that, you run: ```composer global require "laravel/installer=~1.1"```
 
 This will download the framework and enable you to create laravel projects with the command ```laravel new name_of_thing_being_created_here```
+
+## 
+
+
+> ##### A note on the right PHP packages
+>
+>
+>
