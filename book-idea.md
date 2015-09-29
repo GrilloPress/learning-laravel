@@ -19,12 +19,27 @@ It will leverage a bootstrap theme with Sass but not focus too much on that
     * Locate the major folders
     * Create a few routes
 3. Design our Contact Manager app
-4. Scaffold the App
-5. Static Pages and Styles
-6. Create the Models and the Database
-7. Build the Controllers
-8. Draw out the Views and Templates
-9. Review the app
-10. Add authentication
-11. Clean up and refactor
-12. Where to go next and what to build
+    * The app elevator pitch
+    * The models and relationships
+    * The look and feel
+4. Static Pages and Styles
+    * create static pages
+    * Add our basic styles
+5. Create the Models and the Database
+    * Create the models
+    * Seed the database
+6. Build the Controllers
+    * Wire up the Controllers
+    * Add our methods
+    * set up the routes
+7. Draw out the Views and Templates
+    * Update the master template
+    * create the views
+8. Review the app
+    * Security
+    * UI
+    * Code Quality
+    * Errors
+9. Add authentication
+10. Clean up and refactor
+11. Where to go next and what to build
