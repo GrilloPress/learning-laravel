@@ -61,5 +61,10 @@ Route::get('cats/{id}/{age}', function($id, $age) {
 
 Route::get('/my-cat', function()
 {
-  return view('my-cat');
+   return view('my-cat', ['name' => 'Mr Fluffy']);
+});
+
+Route::get('/street-cat', function()
+{
+   return view('street-cat');
 });
