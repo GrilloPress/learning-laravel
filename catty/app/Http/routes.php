@@ -58,3 +58,8 @@ Route::get('cats/{id}', function($id) {
 Route::get('cats/{id}/{age}', function($id, $age) {
   return $id . " " . $age; 
 });
+
+Route::get('/my-cat', function()
+{
+  return view('my-cat');
+});
