@@ -148,3 +148,9 @@ Route::get('/street-cat', function()
    return view('street-cat');
 });
 ```
+
+Although not beautiful, when you hit the ```/street-cat``` URL you should see a different style and font.
+
+If you use your browser's code inspector tool (often ```ctrl+shift+i```) you should be able to explore the HTML output and see all of the bootstrap files surrounding your paragraph.
+
+
