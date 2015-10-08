@@ -1,0 +1,70 @@
+# Partials
+
+Laravel's Blade templating system is very handy. As well as being able to define sections to add content, you can create things called "partials".
+
+Partials are essentially small views or snippets of HTML that are used regularly throughout an app.
+
+The benefit of using a partial is that you can reduce the amount of HTML or PHP your layout file has, or reduce the complexity of a view by having a dedicated partial where your login form or sidebar is found.
+
+Let's create a common one.
+
+## Creating a Navbar
+
+In our ```../resources/views/``` file create a new directory called 'partials'.
+
+Inside our new ```../resources/views/partials/``` directory create a file called 'header.blade.php' and write the following:
+
+```html
+<nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Cats</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+```
+
+> Although we don't have any PHP in this yet, we make it a blade file so that it can be included without errors in our views, as well as enable us to add PHP when we want to
+
+To include this partial in our layout we open up our ```../views/layouts/default.blade.php``` file and write blade's include function with the path to the view we want to include inside the function call.
+
+```php
+@include('partials.header')
+    
+    // do not include this stuff again. This is just to show where we put the partial. Above your div.container
+    <div class="container">
+      @yield('content')
+    </div>
+```
+
+Right above our ```div.container``` write ```@include('partials.header')```. This will inject our partial file into our layout.
+
+Let's work out what is happening here:
+
+1. The ```@include()``` function works like a normal PHP include with the view directory as its base
+2. Inside that function we provide the location of the view we want to include (In our case a partial called header)
+3. As with Laravel elsewhere, we use a dot notation to indicate folders. So, partials.header relates to the file location of ```./partials/header.blade.php```
+4. We don't need to include the ```.blade.php``` part of our file that we are including because the function is smart enough to work that out
+
+If you load up the street-cat route you should now see our navbar.
+
+Naturally you can do this in all manner of template files (not just the layouts). You can also pass your included files specific variables and data like so:
+
+```php
+@include('partials.header', ['message' => 'meow meow meow'])
+```
+
+By doing this, we can, from every template we include a file, also have a custom value returned into our partial. We would do this by echoing the message variable somewhere in our partial.
