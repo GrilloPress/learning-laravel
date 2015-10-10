@@ -68,3 +68,5 @@ Naturally you can do this in all manner of template files (not just the layouts)
 ```
 
 By doing this, we can, from every template we include a file, also have a custom value returned into our partial. We would do this by echoing the message variable somewhere in our partial.
+
+To do so you would update your header partial with the following:

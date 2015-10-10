@@ -17,7 +17,7 @@
   </head>
   <body>
     
-    @include('partials.header')
+    @include('partials.header' ,['message' => 'meow meow meow'])
     
     <div class="container">
       @yield('content')
