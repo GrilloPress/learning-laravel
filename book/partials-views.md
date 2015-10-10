@@ -55,7 +55,8 @@ Right above our ```div.container``` write ```@include('partials.header')```. Thi
 Let's work out what is happening here:
 
 1. The ```@include()``` function works like a normal PHP include with the view directory as its base
-2. Inside that function we provide the location of the view we want to include (In our case a partial called header)
+2. The @ symbol acts a bit like wrapping your function in <?php tags and is used by the Blade templating language
+2. Inside the @include() function we provide the location of the view we want to include (In our case a partial called header)
 3. As with Laravel elsewhere, we use a dot notation to indicate folders. So, partials.header relates to the file location of ```./partials/header.blade.php```
 4. We don't need to include the ```.blade.php``` part of our file that we are including because the function is smart enough to work that out
 
@@ -69,4 +70,17 @@ Naturally you can do this in all manner of template files (not just the layouts)
 
 By doing this, we can, from every template we include a file, also have a custom value returned into our partial. We would do this by echoing the message variable somewhere in our partial.
 
-To do so you would update your header partial with the following:
+To do so you would update your header partial with something like the following:
+
+```php
+
+ <a class="navbar-brand" href="#">Cats are {{ $message }}</a>
+```
+
+Which will print out the $message variable in our site header.
+
+If you are wondering what the "moustache" brackets are, they are how you echo content using the Blade templating language. We'll get to using those a little more in the dedicated blade section.
+
+> This code is actually very brittle because if the code that calls our header doesn't have the $message variable set then we get an exception and it breaks our template
+> To remove this you can use something like isset() to check that you have a variable.
+> If you use something like: ```{{ $message or 'Purrrr' }}``` you can use the variable or fallback to a string, in this case 'Purrrr'.
