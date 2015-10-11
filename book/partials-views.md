@@ -84,3 +84,37 @@ If you are wondering what the "moustache" brackets are, they are how you echo co
 > This code is actually very brittle because if the code that calls our header doesn't have the $message variable set then we get an exception and it breaks our template
 > To remove this you can use something like isset() to check that you have a variable.
 > If you use something like: ```{{ $message or 'Purrrr' }}``` you can use the variable or fallback to a string, in this case 'Purrrr'.
+
+## Partial and View organisation
+
+As Laravel lets you define your view folder organization without restriction or convention, you are free to organize your views as you wish.
+
+This is both a great thing, and a bad thing.
+
+Your own, or teams, style of development and preferences are therefore easy to build in. There are however, many ways to skin a cat and some direction would likely be a better thing.
+
+Feel free to organize your files how you wish however the below are some good rules/methods that you are free to adopt, especially for small or simple apps:
+
+```
+// ./resources/views is our base folder here
+
+- errors
+    - 504.blade.php
+- layouts
+    - default.blade.php
+    - blog.blade.php
+- partials // some people prefer to call this inc or includes
+    - header.blade.php
+    - footer.blade.php
+- articles // an example range of files for any articles routes/controller methods
+    - index.blade.php
+    - create.blade.php
+    - edit.blade.php
+    - show.blade.php
+    - form.blade.php // the file which we use as a partial into other templates. Some prefer to use an underscore to indicate it is a partial and not a top-level template
+- pages // Unless you are creating a CMS with a page-type, the place to create your static pages. Alt name can be static or static-pages
+    - home.blade.php
+    - contact.blade.php
+    - about.blade.php
+
+```
