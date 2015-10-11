@@ -93,7 +93,7 @@ This is both a great thing, and a bad thing.
 
 Your own, or teams, style of development and preferences are therefore easy to build in. There are however, many ways to skin a cat and some direction would likely be a better thing.
 
-Feel free to organize your files how you wish however the below are some good rules/methods that you are free to adopt, especially for small or simple apps:
+Feel free to organize your files how you wish however, below are some good rules/methods that you are free to adopt, especially for small or simple apps:
 
 ```
 // ./resources/views is our base folder here
@@ -103,7 +103,7 @@ Feel free to organize your files how you wish however the below are some good ru
 - layouts
     - default.blade.php
     - blog.blade.php
-- partials // some people prefer to call this inc or includes
+- partials // some people prefer to call this inc or includes but I believe it is best to avoid such a PHP specific word (enabling developers with different backgrounds to understand) and avoid writing lines with repeated words like @include('includes.something')
     - header.blade.php
     - footer.blade.php
 - articles // an example range of files for any articles routes/controller methods
@@ -116,5 +116,8 @@ Feel free to organize your files how you wish however the below are some good ru
     - home.blade.php
     - contact.blade.php
     - about.blade.php
+- auth // this naming follows the default Laravel authentication untility name
+    - register.blade.php
+    - login.blade.php
 
 ```
