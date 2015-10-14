@@ -121,3 +121,7 @@ Feel free to organize your files how you wish however, below are some good rules
     - login.blade.php
 
 ```
+
+If this seems a little confusing so far, don't worry. You'll soon get the handle of it. Remember that getting out a pencil and piece of paper and just overtly sketching out your app structure and view structure is more than fine.
+
+As a developer the more you plan and think, the better your app and app's structure will be.
