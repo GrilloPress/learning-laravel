@@ -6,3 +6,12 @@ catty/Homestead.yaml
 catty/Homestead.json
 catty/.env
 catty/storage/database.sqlite
+
+// GIT IGNORE FOR SILHOUETTE
+
+silhouette/vendor/
+silhouette/node_modules/
+silhouette/Homestead.yaml
+silhouette/Homestead.json
+silhouette/.env
+silhouette/storage/database.sqlite
