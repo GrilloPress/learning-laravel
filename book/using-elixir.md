@@ -38,7 +38,7 @@ To run your Elixir tasks, like say compiling your assets into CSS etc., you can 
 
 > If you use ```gulp --production``` it will compile and compress your assets to be as small as possible
 
-You can avoid having to run the gulp command everytime you make a update to your JavaScript files or update your CSS from any changes to your Sass file by running ```gulp watch```.
+You can avoid having to run the gulp command every time you make a update to your JavaScript files or update your CSS from any changes to your Sass file by running ```gulp watch```.
 
 Running Gulp Watch can be a little resource intensive from time to time so if everything is lagging a little, it can be worth shutting it off. 
 
@@ -47,3 +47,45 @@ Running Gulp Watch can be a little resource intensive from time to time so if ev
 > [To see more, see the Sass website](http://sass-lang.com/)
 
 ### Doing something with Elixir
+
+A common task performed by developers with Elixir is to compile Sass into CSS. Let's set that up.
+
+In your ```./gulpfile.js``` file write the following:
+
+```
+elixir(function(mix) {
+    mix.sass("app.scss");
+});
+```
+
+> This may already be in your ```gulpfile.js```. If so, just keep it as is.
+
+This JavaScript function collects your scss files and "mixes" or transforms it to CSS
+
+Let's write some sass to see it in action.
+
+In your ```./resources/assets/sass/app.scss``` file write the following:
+
+```scss
+// A sass variable
+
+$bg-color: #efefef;
+
+body {
+  
+  background-color: $bg-color;
+  
+}
+```
+
+You can now run your elixir file by running the ```gulp``` command in your app's root directory:
+
+```
+$ gulp
+```
+
+> #### Errors
+> 
+> If you get any errors relating to an elixir module not being found try running ```npm install``` first
+
+After you have run the ```gulp``` you will now have an ```app.css``` file located in your ```/public/css/``` folder.
