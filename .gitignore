@@ -15,3 +15,12 @@ silhouette/Homestead.yaml
 silhouette/Homestead.json
 silhouette/.env
 silhouette/storage/database.sqlite
+
+// GIT IGNORE FOR QUICKSTART
+
+quickstart/vendor/
+quickstart/node_modules/
+quickstart/Homestead.yaml
+quickstart/Homestead.json
+quickstart/.env
+quickstart/storage/database.sqlite
