@@ -24,8 +24,19 @@ To do that, you run: ```composer global require "laravel/installer=~1.1"```
 
 This will download the framework and enable you to create laravel projects with the command ```laravel new name_of_thing_being_created_here```
 
-## 
+## Using Composer to Create Laravel Projects
 
+You can also skip the use of the Laravel Installer and just use Composer. To do that you use this schema:
+
+```
+composer create-project laravel/laravel {{name_of_app}} --prefer-dist
+```
+
+With ```{{name_of_app}}``` being your name of choice. If you were creating some kind of social network app called Twitter you'd write:
+
+```
+composer create-project laravel/laravel twitter --prefer-dist
+```
 
 > ##### A note on the right PHP packages
 >
